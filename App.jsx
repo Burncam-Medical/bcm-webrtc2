@@ -2,7 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from 'react';
 import 'react-native-reanimated';
-import { SafeAreaView, StatusBar, Text } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
 import AppNavigator from './navigation/AppNavigator';
 import * as SplashScreen from 'expo-splash-screen';
 

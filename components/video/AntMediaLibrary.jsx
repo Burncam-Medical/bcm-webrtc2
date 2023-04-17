@@ -33,14 +33,10 @@ export const useAntMedia = (params) => {
 
 	let localStream = useRef(null);
 	const [remoteStreams, setRemoteStreams] = useState({});
-	const [remoteStreamsMapped, setRemoteStreamsMapped] = useState(
-		{}
-	);
+	const [remoteStreamsMapped, setRemoteStreamsMapped] = useState({});
 
 	const remotePeerConnection = useRef({}).current;
-	const remotePeerConnectionStats = useRef(
-		{}
-	).current;
+	const remotePeerConnectionStats = useRef({}).current;
 
 	const remoteDescriptionSet = useRef({}).current;
 	const iceCandidateList = useRef({}).current;

@@ -11,7 +11,7 @@ import {
 import { useAntMedia, rtc_view } from './AntMediaLibrary';
 
 export default function Conference() {
-	var defaultRoomName = 'bcmTest10000';
+	var defaultRoomName = 'bcmTest10001';
 	const server = 'test.antmedia.io';
 	const webSocketUrl = `ws://${server}:5080/WebRTCAppEE/websocket`;
 
@@ -207,7 +207,6 @@ export default function Conference() {
 	};
 
 	useEffect(() => {
-		console.log('adaptor.remoteStreamsMapped', adaptor.remoteStreamsMapped);
 		const remoteStreamArr = [];
 
 		if (adaptor && Object.keys(adaptor.remoteStreamsMapped).length > 0) {
@@ -244,8 +243,7 @@ export default function Conference() {
 									style={styles.remoteContainer}>
 									{remoteStreams.map((a, index) => {
 										const count = remoteStreams.length;
-										console.log('count', count);
-										console.log(remoteStreams);
+										console.log('Remote stream count', count);
 										if (a)
 											return (
 												<View key={index}>
